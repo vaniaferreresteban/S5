@@ -1,15 +1,82 @@
-.card {
+section {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 10vh;
+
+  .card {
+    border-radius: 30px;
+    margin: 0.5em;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
-  width: 20%;
-  height: 500px;
-  img{
-    max-width: 100%;
-  }
-  >div{
-    flex: 0 1 auto;
-    align-self: flex-end;
-    padding: 1em;
+    justify-content: flex-end;
+    width: 15%;
+    height: 700px;
+    overflow: hidden;
+
+    .card-img {
+      flex: 0 0 400px;
+      align-self: flex-start;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      background-color: transparent;
+      img {
+        max-width: 100%;
+      }
+    }
+    .description,
+    .currentstep-container {
+      flex: 1 1 300px;
+      align-self: flex-end;
+      padding: 1em;
+      background-color: white;
+      padding: 1em;
+    }
+
+    .currentstep-container {
+      flex: 1 1 100px;
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      > div {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        flex: 0 0 50%;
+        width: 50%;
+        margin-bottom: 1em;
+      }
+    }
+    .step {
+      align-self: flex-start;
+      width: 6px;
+      height: 6px;
+      border-radius: 4px;
+      background-color: darkgrey;
+      margin-right: 0.3em;
+    }
+    .currentstep {
+      width: 18px;
+      background-color: black;
+    }
+    button{
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      font-weight: bold;
+    }
+    #back{
+      background-color: white;
+      border: 1px solid black;
+    }
+    #next{
+      background-color: black;
+      color: white;
+      border: none;
+    }
   }
 }

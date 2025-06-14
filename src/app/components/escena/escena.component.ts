@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { IStep } from '../../_interfaces/i-step';
 
 @Component({
-  selector: 'app-escena',
+  selector: 'escena-component',
   imports: [CommonModule],
   templateUrl: './escena.component.html',
   styleUrl: './escena.component.scss'
 })
 export class EscenaComponent {
-@Input() steps:IStep[]=[]
+@Input() steps:IStep[]=[];
+currentStep:number=0;
 }

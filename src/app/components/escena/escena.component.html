@@ -1,9 +1,28 @@
-@for(step of steps;track $index){
-<div class="card" [style.background-color]="step.bgcolor">
-  <img [src]="step.img" alt="step.title" />
-  <div>
-    <h3>{{ step.title }}</h3>
-    {{ step.descripcion }}
+<section>
+  @for(step of steps;track $index){ @if(currentStep==$index){
+
+  <div class="card" [style.background-color]="step.bgcolor">
+    <div class="card-img">
+      <img [src]="step.img" alt="step.title" />
+    </div>
+    <div class="description">
+      <h3>{{ step.title }}</h3>
+      {{ step.descripcion }}
+    </div>
+    <div class="currentstep-container">
+      <div>
+        @for(step of steps;track $index){
+        <div
+          [ngClass]="$index === currentStep ? 'currentstep' : 'step'"
+          class="step"
+        ></div>
+        }
+      </div>
+      <div>
+        @if(currentStep>0){<button id="back">◀</button>}
+        @if(currentStep<steps.length){<button id="next">▶</button>}
+      </div>
+    </div>
   </div>
-</div>
-}
+  } }
+</section>
