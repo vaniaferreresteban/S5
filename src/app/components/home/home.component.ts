@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { EscenaComponent } from '../escena/escena.component';
 
@@ -12,11 +12,10 @@ import { IStep } from '../../_interfaces/i-step';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
-   steps: IStep[] = [];
-  constructor(private stepsService: StepsService) {}
-  
+  steps: IStep[] = [];
+  private stepsService = inject(StepsService);
+
   ngOnInit() {
-    this.steps=this.stepsService.getSteps();
+    this.steps = this.stepsService.getSteps();
   }
-  
 }

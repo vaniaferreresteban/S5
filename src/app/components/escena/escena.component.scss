@@ -1,0 +1,15 @@
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+  width: 20%;
+  height: 500px;
+  img{
+    max-width: 100%;
+  }
+  >div{
+    flex: 0 1 auto;
+    align-self: flex-end;
+    padding: 1em;
+  }
+}
