@@ -6,7 +6,7 @@ import { StepsService } from '../../_services/steps';
 import { IStep } from '../../_interfaces/i-step';
 
 @Component({
-  selector: 'home-component',
+  selector: 'app-home-component',
   imports: [EscenaComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

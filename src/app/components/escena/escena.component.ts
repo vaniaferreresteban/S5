@@ -1,16 +1,19 @@
 
-import { Component, Input } from '@angular/core';
+import { Component, Input,signal} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { IStep } from '../../_interfaces/i-step';
 
 @Component({
-  selector: 'escena-component',
+  selector: 'app-escena-component',
   imports: [CommonModule],
   templateUrl: './escena.component.html',
   styleUrl: './escena.component.scss'
 })
 export class EscenaComponent {
 @Input() steps:IStep[]=[];
-currentStep:number=0;
+currentStep=signal(0);
+changeCurrentStep=(value:number):void=>{
+this.currentStep.update(currentStep=>currentStep+value);
+}
 }

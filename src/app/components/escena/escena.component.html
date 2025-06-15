@@ -1,7 +1,7 @@
 <section>
-  @for(step of steps;track $index){ @if(currentStep==$index){
+  @for(step of steps;track $index){ 
 
-  <div class="card" [style.background-color]="step.bgcolor">
+  <div class="card"[ngClass]="$index === currentStep() ? 'currentstep' : $index < currentStep() ? 'left step' : 'middle step'" [style.background-color]="step.bgcolor">
     <div class="card-img">
       <img [src]="step.img" alt="step.title" />
     </div>
@@ -13,16 +13,16 @@
       <div>
         @for(step of steps;track $index){
         <div
-          [ngClass]="$index === currentStep ? 'currentstep' : 'step'"
+          [ngClass]="$index === currentStep() ? 'currentstep' : 'step'"
           class="step"
         ></div>
         }
       </div>
       <div>
-        @if(currentStep>0){<button id="back">◀</button>}
-        @if(currentStep<steps.length){<button id="next">▶</button>}
+        @if(currentStep() >0){<button id="back" (click)="changeCurrentStep(-1)">◀</button>}
+        @if(currentStep() <steps.length-1){<button id="next" (click)="changeCurrentStep(1)">▶</button>}
       </div>
     </div>
   </div>
-  } }
+   }
 </section>
