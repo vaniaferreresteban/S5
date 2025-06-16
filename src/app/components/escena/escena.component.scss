@@ -3,10 +3,10 @@ section {
   flex-flow: row nowrap;
   justify-content: center;
   box-sizing: border-box;
-  margin: 10vh auto 0;
   position: relative;
-  width: 15%;
-  height: 700px;
+  width: 100%;
+  height: 100vh;
+ font-size: 1.1em;
 
   .card {
     transition: left 0.4s ease-out, opacity 0.2s ease-out;
@@ -93,12 +93,49 @@ section {
       margin-left: 0.5em;
     }
   }
-  .card.left{
-left: -100%;
-opacity: 0;
+  .card.left {
+    left: -100%;
+    opacity: 0;
   }
   .card.currentstep {
     opacity: 1;
     left: 0;
+  }
+}
+@media screen and (min-width: 576px) {
+  .card {
+    flex-direction: row;
+    font-size: 1.1em;
+  }
+}
+@media screen and (min-width: 768px) {
+  section {
+    width: 50%;
+    height: 700px;
+    font-size: 1.2em;
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      margin: 10vh auto 0;
+      width: 50%;
+      height: 700px;
+      font-size: 1.3em;
+    }
+    @media screen and (orientation: landscape) {
+      section {
+        top: 25%;
+        width: 100%;
+        height: 50vh;
+        .card {
+          flex-flow: row nowrap;
+          .description{
+            height: 100%;
+          }
+          .currentstep-container{
+            height: 100%;
+          }
+        }
+      }
+    }
   }
 }
