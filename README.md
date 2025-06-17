@@ -1,59 +1,109 @@
-# S5
+# S5: Onboarding Digital (Angular, ITAcademy)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.1.
+Este proyecto es una aplicación web interactiva desarrollada con Angular para mostrar un proceso de Onboarding digital. Permite a los usuarios navegar a través de una serie de pasos o "pantallas" de introducción utilizando botones de navegación.
 
-## Development server
+## Tabla de Contenidos
 
-To start a local development server, run:
+- [Acerca del Proyecto](#acerca-del-proyecto)
+- [Características](#características)
+- [Demostración Visual](#demostración-visual)
+- [Tecnologías Usadas](#tecnologías-usadas)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Licencia](#licencia)
+
+## Acerca del Proyecto
+
+La aplicación "Onboarding Digital" ha sido diseñada para ofrecer una experiencia de usuario guiada y visualmente atractiva. Su objetivo principal es presentar información paso a paso, ideal para nuevos usuarios o para introducir nuevas funcionalidades en un producto o servicio. La interfaz es limpia y se centra en la progresión controlada por el usuario.
+
+## Características
+
+* **Navegación Intuitiva:** Dos botones de navegación (`Avanzar` y `Retroceder`) para un control fácil del flujo del onboarding.
+* **Contenido Dinámico:** La aplicación modifica el contenido y la imagen en función de la pantalla actual.
+* **Diseño Responsivo:** Se adapta a diferentes tamaños de pantalla para una experiencia óptima en dispositivos móviles y de escritorio.
+* **Basado en Componentes:** Modular, lo que facilita el mantenimiento del código.
+
+## Demostración Visual
+
+Aquí puedes ver un ejemplo de las pantallas principales de la aplicación.
+
+<img src="https://i.imgur.com/VFp4x9w.png" style="height:200px;display:inline-block;margin-right:10px"><img src="https://i.imgur.com/uAEycsk.png" style="height:200px;display:inline-block;margin-right:10px"><img src="https://i.imgur.com/njPgDRP.png" style="height:200px;display:inline-block;margin-right:10px">
+
+En tiempo de ejecución, solo una pantalla será visible a la vez.
+![Ejemplo de Pantallas de Onboarding](docs/onboarding_screens_example.png)
+
+## Tecnologías Usadas
+
+Este proyecto ha sido desarrollado utilizando las siguientes tecnologías:
+
+* **[Angular](https://angular.dev/)** - v20.0.0 (Framework para el frontend)
+* **[TypeScript](https://www.typescriptlang.org/)** - v5.8.2 (Superset de JavaScript)
+* **[Node.js](https://nodejs.org/)** (Entorno de ejecución de JavaScript - Requerido para Angular CLI)
+* **HTML5**
+* **SCSS** (Sass) - Para los estilos CSS
+
+## Instalación
+
+Para configurar y ejecutar este proyecto localmente, sigue los siguientes pasos:
+
+### Prerequisitos
+
+Asegúrate de tener instalado Node.js (que incluye npm) en tu sistema.
+
+* **Node.js**: Descárgalo e instálalo desde [nodejs.org](https://nodejs.org/). Se recomienda una versión LTS.
+* **Angular CLI**: Instala el CLI de Angular globalmente si aún no lo tienes:
+    ```bash
+    npm install -g @angular/cli@20.0.1
+    ```
+
+### Pasos de Instalación
+
+1.  **Clona el repositorio:**
+    ```bash
+    git clone https://github.com/vaniaferrereesteban/S5.git
+    ```
+2.  **Navega al directorio del proyecto:**
+    ```bash
+    cd S5
+    ```
+3.  **Instala las dependencias de Node:**
+    ```bash
+    npm install
+    ```
+
+## Uso
+
+Una vez que hayas instalado las dependencias, puedes ejecutar la aplicación en un servidor de desarrollo local o construirla para producción.
+
+### Ejecutar en Modo de Desarrollo
+
+Para iniciar la aplicación en modo de desarrollo con recarga en vivo:
 
 ```bash
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Abre tu navegador y navega a http://localhost:4200/. La aplicación se recargará automáticamente si realizas cambios en los archivos fuente.
+Construir para Producción
 
-## Code scaffolding
+Para construir el proyecto para despliegue en un entorno de producción:
+Bash
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
 ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Los artefactos de construcción se almacenarán en el directorio dist/.
+Ejecutar Pruebas
 
-## Running unit tests
+Para ejecutar las pruebas unitarias:
+Bash
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Licencia
+This project is open-source and available under the MIT License. (Assuming MIT License, if another license is preferred, please update.)
+Contacto
 
-For end-to-end (e2e) testing, run:
+### Para cualquier pregunta o comentario, puedes contactar al mantenedor del proyecto:
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Vania Ferrer Esteban
+GitHub: vaniaferrereesteban
