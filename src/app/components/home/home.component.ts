@@ -1,13 +1,13 @@
 import { Component, OnInit, inject } from '@angular/core';
 
-import { EscenaComponent } from '../escena/escena.component';
+import { SceneComponent } from '../scene/scene.component';
 
 import { StepsService } from '../../_services/steps';
 import { IStep } from '../../_interfaces/i-step';
 
 @Component({
   selector: 'app-home-component',
-  imports: [EscenaComponent],
+  imports: [SceneComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

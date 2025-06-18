@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EscenaComponent } from './escena.component';
+import { SceneComponent } from './scene.component';
 
-describe('Escena', () => {
-  let component: EscenaComponent;
-  let fixture: ComponentFixture<EscenaComponent>;
+describe('Scene', () => {
+  let component: SceneComponent;
+  let fixture: ComponentFixture<SceneComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EscenaComponent],
+      imports: [SceneComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(EscenaComponent);
+    fixture = TestBed.createComponent(SceneComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
