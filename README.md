@@ -100,10 +100,10 @@ ng test
 ```
 
 ## Licencia
-This project is open-source and available under the MIT License. (Assuming MIT License, if another license is preferred, please update.)
-Contacto
+This project is open-source and available under the MIT License. 
 
-### Para cualquier pregunta o comentario, puedes contactar al mantenedor del proyecto:
+### Contacto
+Para cualquier pregunta o comentario, puedes contactar al mantenedor del proyecto:
 
 Vania Ferrer Esteban
 GitHub: vaniaferrereesteban
